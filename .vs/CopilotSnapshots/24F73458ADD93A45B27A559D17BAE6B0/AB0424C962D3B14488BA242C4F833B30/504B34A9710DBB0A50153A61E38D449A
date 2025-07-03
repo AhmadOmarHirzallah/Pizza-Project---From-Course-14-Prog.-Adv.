@@ -1,0 +1,55 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace PizzaProject
+{
+    /// <summary>
+    /// Base form class that automatically applies consistent fonts to all controls
+    /// Inherit from this class instead of Form to get automatic font styling
+    /// </summary>
+    public partial class BaseForm : Form
+    {
+        public BaseForm()
+        {
+            InitializeComponent();
+        }
+
+        protected virtual void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // BaseForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "BaseForm";
+            this.Text = "BaseForm";
+            this.Load += new System.EventHandler(this.BaseForm_Load);
+            this.ResumeLayout(false);
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            // Automatically apply fonts when form loads
+            FontManager.ApplyFontsToForm(this);
+        }
+
+        /// <summary>
+        /// Call this method to refresh fonts on all controls after adding new controls dynamically
+        /// </summary>
+        protected void RefreshFonts()
+        {
+            FontManager.ApplyFontsToForm(this);
+        }
+
+        /// <summary>
+        /// Apply fonts with a custom default font
+        /// </summary>
+        /// <param name="customDefaultFont">Custom font to use as default</param>
+        protected void ApplyCustomFonts(System.Drawing.Font customDefaultFont)
+        {
+            FontManager.ApplyFontsToForm(this, customDefaultFont);
+        }
+    }
+}

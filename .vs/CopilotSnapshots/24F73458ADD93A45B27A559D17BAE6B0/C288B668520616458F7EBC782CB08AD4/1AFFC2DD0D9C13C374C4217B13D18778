@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PizzaProject
+{
+    internal static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            
+            // Handle application exit to dispose fonts
+            Application.ApplicationExit += Application_ApplicationExit;
+            
+            Application.Run(new FrmMain());
+        }
+
+        private static void Application_ApplicationExit(object sender, EventArgs e)
+        {
+            // Dispose static fonts when application closes
+            FontManager.DisposeStaticFonts();
+        }
+    }
+}

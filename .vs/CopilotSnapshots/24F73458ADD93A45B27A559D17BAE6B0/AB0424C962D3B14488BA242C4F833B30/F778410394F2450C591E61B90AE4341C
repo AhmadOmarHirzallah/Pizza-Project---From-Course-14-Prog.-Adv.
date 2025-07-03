@@ -1,0 +1,105 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace PizzaProject
+{
+    /// <summary>
+    /// Example form demonstrating how to use FontManager
+    /// This shows different ways to apply fonts to forms
+    /// </summary>
+    public partial class ExampleForm : BaseForm  // Inherit from BaseForm for automatic font styling
+    {
+        public ExampleForm()
+        {
+            InitializeComponent();
+            
+            // Fonts are automatically applied because we inherit from BaseForm
+            // If you need custom behavior, you can override the Load event
+        }
+
+        private void ExampleForm_Load(object sender, EventArgs e)
+        {
+            // Example 1: Manual font application (if not using BaseForm)
+            // FontManager.ApplyFontsToForm(this);
+
+            // Example 2: Apply custom default font
+            // FontManager.ApplyFontsToForm(this, new Font("Arial", 16));
+
+            // Example 3: Set specific fonts for specific controls
+            // FontManager.SetFontForSpecificControls(this, 
+            //     new string[] { "btnSave", "btnCancel" }, 
+            //     FontManager.LargeFont);
+
+            // Example 4: Apply fonts to specific control collection
+            // FontManager.ApplyFontsRecursive(this.panel1.Controls, FontManager.SmallFont);
+        }
+
+        // Example: Method to refresh fonts after adding controls dynamically
+        private void AddControlsAndRefreshFonts()
+        {
+            // Add new controls dynamically
+            Button newButton = new Button();
+            newButton.Text = "New Button";
+            newButton.Location = new Point(10, 10);
+            this.Controls.Add(newButton);
+
+            // Refresh fonts to include new controls
+            this.RefreshFonts();
+        }
+
+        // Example: Method to apply custom fonts to the form
+        private void ApplyCustomStyling()
+        {
+            Font customFont = new Font("Calibri", 14, FontStyle.Regular);
+            this.ApplyCustomFonts(customFont);
+        }
+    }
+}
+
+/* 
+ * USAGE INSTRUCTIONS:
+ * 
+ * Method 1: Inherit from BaseForm (Recommended)
+ * =============================================
+ * public partial class YourForm : BaseForm
+ * {
+ *     // Fonts are automatically applied!
+ * }
+ * 
+ * Method 2: Manual Application in Form_Load
+ * =========================================
+ * private void YourForm_Load(object sender, EventArgs e)
+ * {
+ *     FontManager.ApplyFontsToForm(this);
+ * }
+ * 
+ * Method 3: Custom Font Application
+ * =================================
+ * private void YourForm_Load(object sender, EventArgs e)
+ * {
+ *     Font customFont = new Font("Arial", 16);
+ *     FontManager.ApplyFontsToForm(this, customFont);
+ * }
+ * 
+ * Method 4: Specific Control Targeting
+ * ====================================
+ * FontManager.SetFontForSpecificControls(this, 
+ *     new string[] { "lblTitle", "btnMain" }, 
+ *     FontManager.TitleFont);
+ * 
+ * Available Predefined Fonts:
+ * - FontManager.DefaultFont (Segoe UI, 18pt)
+ * - FontManager.TitleFont (Segoe UI, 23pt, Bold)
+ * - FontManager.SmallFont (Segoe UI, 14pt)
+ * - FontManager.LargeFont (Segoe UI, 24pt)
+ * 
+ * Supported Controls:
+ * - All standard WinForms controls
+ * - All Guna2 controls (automatically detected)
+ * - Any custom control with a Font property
+ * 
+ * Special Naming Convention:
+ * - Controls with "Title" or "title" in their name get TitleFont automatically
+ * - Controls named "lblTitle" get TitleFont automatically
+ */

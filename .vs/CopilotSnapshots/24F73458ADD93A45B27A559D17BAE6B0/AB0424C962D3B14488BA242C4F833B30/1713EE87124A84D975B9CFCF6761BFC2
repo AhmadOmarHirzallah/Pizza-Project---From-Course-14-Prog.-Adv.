@@ -1,0 +1,47 @@
+﻿using Guna.UI2.WinForms;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PizzaProject
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent( );
+        }
+
+        private void Form1_Load( object sender, EventArgs e )
+        {
+            setFontRecursive( this.Controls, new Font( "Segoe UI", 18, FontStyle.Regular ) );
+        }
+
+        private void setFontRecursive(Control.ControlCollection Controls, Font newFont)
+        {
+            foreach (Control Ctrl in Controls)
+            {
+                if ((Ctrl is Label || Ctrl is Guna2HtmlLabel) && Ctrl.Name == "lblTitle")
+                {
+                    Ctrl.Font = new Font( "Seagoe UI", 23, FontStyle.Bold );
+                }
+                else
+                {
+                    Ctrl.Font = newFont;
+                }
+                if ( Ctrl.HasChildren)
+                {
+                    setFontRecursive( Ctrl.Controls, Font );
+                }
+            }
+        }
+
+
+    }
+}

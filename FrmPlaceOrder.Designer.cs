@@ -1,0 +1,321 @@
+﻿namespace PizzaProject
+{
+    partial class FrmPlaceOrder
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pnlTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pnlMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlCenter = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
+            this.gpOrderPrice = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblTitlePrice = new System.Windows.Forms.Label();
+            this.btnOrderPizza = new Guna.UI2.WinForms.Guna2Button();
+            this.gpOrderSummary = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblWhereToEat = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblCrustType = new System.Windows.Forms.Label();
+            this.lblToppings = new System.Windows.Forms.Label();
+            this.lblSize = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnlTop.SuspendLayout();
+            this.pnlMain.SuspendLayout();
+            this.pnlCenter.SuspendLayout();
+            this.gpOrderPrice.SuspendLayout();
+            this.gpOrderSummary.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlTop
+            // 
+            this.pnlTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnlTop.BorderRadius = 12;
+            this.pnlTop.Controls.Add(this.guna2Panel1);
+            this.pnlTop.Controls.Add(this.lblTitle);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.ShadowDecoration.Parent = this.pnlTop;
+            this.pnlTop.Size = new System.Drawing.Size(1046, 124);
+            this.pnlTop.TabIndex = 0;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackgroundImage = global::PizzaProject.Resource1.PizzaImg;
+            this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel1.BorderRadius = 12;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2Panel1.Location = new System.Drawing.Point(709, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(337, 124);
+            this.guna2Panel1.TabIndex = 1;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(173, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(354, 52);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Pizza Restaurant";
+            // 
+            // pnlMain
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMain.Controls.Add(this.pnlCenter);
+            this.pnlMain.Controls.Add(this.pnlTop);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.ShadowDecoration.Parent = this.pnlMain;
+            this.pnlMain.Size = new System.Drawing.Size(1046, 729);
+            this.pnlMain.TabIndex = 1;
+            // 
+            // pnlCenter
+            // 
+            this.pnlCenter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlCenter.BorderRadius = 12;
+            this.pnlCenter.Controls.Add(this.btnReset);
+            this.pnlCenter.Controls.Add(this.gpOrderPrice);
+            this.pnlCenter.Controls.Add(this.btnOrderPizza);
+            this.pnlCenter.Controls.Add(this.gpOrderSummary);
+            this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCenter.Location = new System.Drawing.Point(0, 124);
+            this.pnlCenter.Name = "pnlCenter";
+            this.pnlCenter.ShadowDecoration.Parent = this.pnlCenter;
+            this.pnlCenter.Size = new System.Drawing.Size(1046, 605);
+            this.pnlCenter.TabIndex = 2;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BorderRadius = 16;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Location = new System.Drawing.Point(695, 453);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(227, 95);
+            this.btnReset.TabIndex = 0;
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // gpOrderPrice
+            // 
+            this.gpOrderPrice.BorderColor = System.Drawing.Color.SteelBlue;
+            this.gpOrderPrice.Controls.Add(this.lblTitlePrice);
+            this.gpOrderPrice.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.gpOrderPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gpOrderPrice.ForeColor = System.Drawing.Color.Black;
+            this.gpOrderPrice.Location = new System.Drawing.Point(681, 68);
+            this.gpOrderPrice.Name = "gpOrderPrice";
+            this.gpOrderPrice.ShadowDecoration.Parent = this.gpOrderPrice;
+            this.gpOrderPrice.Size = new System.Drawing.Size(333, 195);
+            this.gpOrderPrice.TabIndex = 5;
+            this.gpOrderPrice.Text = "Order Price";
+            // 
+            // lblTitlePrice
+            // 
+            this.lblTitlePrice.AutoSize = true;
+            this.lblTitlePrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitlePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblTitlePrice.Location = new System.Drawing.Point(23, 105);
+            this.lblTitlePrice.Name = "lblTitlePrice";
+            this.lblTitlePrice.Size = new System.Drawing.Size(48, 30);
+            this.lblTitlePrice.TabIndex = 3;
+            this.lblTitlePrice.Text = "$ 0";
+            // 
+            // btnOrderPizza
+            // 
+            this.btnOrderPizza.BorderRadius = 16;
+            this.btnOrderPizza.CheckedState.Parent = this.btnOrderPizza;
+            this.btnOrderPizza.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrderPizza.CustomImages.Parent = this.btnOrderPizza;
+            this.btnOrderPizza.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnOrderPizza.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnOrderPizza.ForeColor = System.Drawing.Color.Black;
+            this.btnOrderPizza.HoverState.Parent = this.btnOrderPizza;
+            this.btnOrderPizza.Location = new System.Drawing.Point(695, 291);
+            this.btnOrderPizza.Name = "btnOrderPizza";
+            this.btnOrderPizza.ShadowDecoration.Parent = this.btnOrderPizza;
+            this.btnOrderPizza.Size = new System.Drawing.Size(304, 123);
+            this.btnOrderPizza.TabIndex = 0;
+            this.btnOrderPizza.Text = "Place Order";
+            this.btnOrderPizza.Click += new System.EventHandler(this.btnOrderPizza_Click);
+            // 
+            // gpOrderSummary
+            // 
+            this.gpOrderSummary.BackColor = System.Drawing.Color.Transparent;
+            this.gpOrderSummary.Controls.Add(this.lblWhereToEat);
+            this.gpOrderSummary.Controls.Add(this.label8);
+            this.gpOrderSummary.Controls.Add(this.lblCrustType);
+            this.gpOrderSummary.Controls.Add(this.lblToppings);
+            this.gpOrderSummary.Controls.Add(this.lblSize);
+            this.gpOrderSummary.Controls.Add(this.label5);
+            this.gpOrderSummary.Controls.Add(this.label3);
+            this.gpOrderSummary.Controls.Add(this.label1);
+            this.gpOrderSummary.CustomBorderColor = System.Drawing.Color.DodgerBlue;
+            this.gpOrderSummary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gpOrderSummary.ForeColor = System.Drawing.Color.Black;
+            this.gpOrderSummary.Location = new System.Drawing.Point(30, 34);
+            this.gpOrderSummary.Name = "gpOrderSummary";
+            this.gpOrderSummary.ShadowDecoration.Parent = this.gpOrderSummary;
+            this.gpOrderSummary.Size = new System.Drawing.Size(611, 524);
+            this.gpOrderSummary.TabIndex = 4;
+            this.gpOrderSummary.Text = "Order Summary";
+            // 
+            // lblWhereToEat
+            // 
+            this.lblWhereToEat.AutoSize = true;
+            this.lblWhereToEat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblWhereToEat.Location = new System.Drawing.Point(223, 453);
+            this.lblWhereToEat.Name = "lblWhereToEat";
+            this.lblWhereToEat.Size = new System.Drawing.Size(81, 30);
+            this.lblWhereToEat.TabIndex = 4;
+            this.lblWhereToEat.Text = "label1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label8.Location = new System.Drawing.Point(52, 453);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(178, 30);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Where To Eat:";
+            // 
+            // lblCrustType
+            // 
+            this.lblCrustType.AutoSize = true;
+            this.lblCrustType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblCrustType.Location = new System.Drawing.Point(223, 350);
+            this.lblCrustType.Name = "lblCrustType";
+            this.lblCrustType.Size = new System.Drawing.Size(81, 30);
+            this.lblCrustType.TabIndex = 3;
+            this.lblCrustType.Text = "label1";
+            // 
+            // lblToppings
+            // 
+            this.lblToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblToppings.Location = new System.Drawing.Point(223, 184);
+            this.lblToppings.Name = "lblToppings";
+            this.lblToppings.Size = new System.Drawing.Size(350, 90);
+            this.lblToppings.TabIndex = 3;
+            this.lblToppings.Text = "label1";
+            // 
+            // lblSize
+            // 
+            this.lblSize.AutoSize = true;
+            this.lblSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblSize.Location = new System.Drawing.Point(223, 70);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(81, 30);
+            this.lblSize.TabIndex = 3;
+            this.lblSize.Text = "label1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label5.Location = new System.Drawing.Point(52, 350);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 30);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Crust Type:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label3.Location = new System.Drawing.Point(52, 184);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 30);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Toppings:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label1.Location = new System.Drawing.Point(52, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 30);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Size:";
+            // 
+            // FrmPlaceOrder
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1046, 729);
+            this.Controls.Add(this.pnlMain);
+            this.Name = "FrmPlaceOrder";
+            this.Text = "FrmSummary";
+            this.Load += new System.EventHandler(this.FrmPlaceOrder_Load);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
+            this.pnlMain.ResumeLayout(false);
+            this.pnlCenter.ResumeLayout(false);
+            this.gpOrderPrice.ResumeLayout(false);
+            this.gpOrderPrice.PerformLayout();
+            this.gpOrderSummary.ResumeLayout(false);
+            this.gpOrderSummary.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2Panel pnlTop;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label lblTitle;
+        private Guna.UI2.WinForms.Guna2Panel pnlMain;
+        private Guna.UI2.WinForms.Guna2Panel pnlCenter;
+        private Guna.UI2.WinForms.Guna2GroupBox gpOrderSummary;
+        private System.Windows.Forms.Label lblCrustType;
+        private System.Windows.Forms.Label lblToppings;
+        private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnReset;
+        private Guna.UI2.WinForms.Guna2Button btnOrderPizza;
+        private Guna.UI2.WinForms.Guna2GroupBox gpOrderPrice;
+        private System.Windows.Forms.Label lblTitlePrice;
+        private System.Windows.Forms.Label lblWhereToEat;
+        private System.Windows.Forms.Label label8;
+    }
+}

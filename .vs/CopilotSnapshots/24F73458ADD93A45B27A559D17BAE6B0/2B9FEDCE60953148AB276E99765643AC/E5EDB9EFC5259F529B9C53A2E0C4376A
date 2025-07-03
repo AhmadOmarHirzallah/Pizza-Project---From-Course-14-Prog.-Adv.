@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PizzaProject
+{
+    public partial class FrmPlaceOrder : Form
+    {
+        public FrmPlaceOrder()
+        {
+            InitializeComponent();
+        }
+
+        private void FrmPlaceOrder_Load(object sender, EventArgs e)
+        {
+            FontManager.ApplyFontsToForm(this);
+        }
+
+        private void disableControls()
+        {
+            // Disable all controls recursively, except Reset button
+            DisableControlsRecursive(this.Controls);
+        }
+
+        private void enableControls()
+        {
+            // Enable all controls recursively
+            EnableControlsRecursive(this.Controls);
+        }
+
+        private void DisableControlsRecursive(Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                // Skip the Reset button - keep it enabled
+                if (control.Name.Contains("Reset"))
+                {
+                    continue;
+                }
+
+                // Disable the control
+                control.Enabled = false;
+
+                // Recursively disable child controls if they exist
+                if (control.HasChildren)
+                {
+                    DisableControlsRecursive(control.Controls);
+                }
+            }
+        }
+
+        private void EnableControlsRecursive(Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                // Enable the control
+                control.Enabled = true;
+
+                // Recursively enable child controls if they exist
+                if (control.HasChildren)
+                {
+                    EnableControlsRecursive(control.Controls);
+                }
+            }
+        }
+
+        private void btnOrderPizza_Click(object sender, EventArgs e)
+        {
+            bool? placeOrderResult = MessageBox.Show(
+                "Are you sure you want to place this order?",
+                "Confirm Order",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2) == DialogResult.Yes;
+
+            if (placeOrderResult == true)
+            {
+                MessageBox.Show("Your order has been placed successfully!",
+                                 "Order placed successfully",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                disableControls();
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            // Re-enable all controls when Reset is clicked
+            enableControls();
+            
+            // You can also clear/reset the order summary here
+            // ClearOrderSummary();
+        }
+
+        // Optional: Method to clear the order summary
+        private void ClearOrderSummary()
+        {
+            lblSize.Text = "";
+            lblToppings.Text = "";
+            lblCrustType.Text = "";
+            lblWhereToEat.Text = "";
+            lblTitlePrice.Text = "$ 0";
+        }
+    }
+}

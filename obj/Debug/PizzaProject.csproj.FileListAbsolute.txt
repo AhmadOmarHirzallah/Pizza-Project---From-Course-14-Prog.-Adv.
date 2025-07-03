@@ -1,0 +1,15 @@
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\bin\Debug\PizzaProject.exe.config
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\bin\Debug\PizzaProject.exe
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\bin\Debug\PizzaProject.pdb
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\bin\Debug\Guna.UI2.dll
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.csproj.AssemblyReference.cache
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.Properties.Resources.resources
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.csproj.GenerateResource.cache
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.csproj.CoreCompileInputs.cache
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaPro.955DED49.Up2Date
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.exe
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.pdb
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.exe.config
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.Resource1.resources
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.FrmMain.resources
+E:\Work-And-Tutorials\Practice\Programming-Advices\PizzaProject\obj\Debug\PizzaProject.FrmPlaceOrder.resources

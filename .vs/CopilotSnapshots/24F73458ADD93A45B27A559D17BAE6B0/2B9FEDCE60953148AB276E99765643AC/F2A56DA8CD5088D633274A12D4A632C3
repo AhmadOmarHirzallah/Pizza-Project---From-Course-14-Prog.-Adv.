@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PizzaProject
+{
+    public partial class FrmPlaceOrder : Form
+    {
+        public FrmPlaceOrder()
+        {
+            InitializeComponent( );
+        }
+
+        private void FrmPlaceOrder_Load( object sender, EventArgs e )
+        {
+            FontManager.ApplyFontsToForm(this); 
+        }
+
+        private void disableControls( )
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control.Name.Contains( "Reset" ))
+                    continue;
+                control.Enabled = false;
+            }
+        }
+
+        private void btnOrderPizza_Click( object sender, EventArgs e )
+        {
+            bool? placeOrderResult = MessageBox.Show(
+                "Are you sure you want to place this order?",
+                "Confirm Order",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2 ) == DialogResult.Yes;
+
+            if (placeOrderResult == true)
+            {
+                MessageBox.Show( "Your order has been placed successfully!",
+                                 "Order placed successfully",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                disableControls( );
+            }
+
+        }
+    }
+}
